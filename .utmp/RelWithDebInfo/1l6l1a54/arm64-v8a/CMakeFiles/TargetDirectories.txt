@@ -1,0 +1,8 @@
+/Users/robertpetro/Documents/GitHub/game-room/.utmp/RelWithDebInfo/1l6l1a54/arm64-v8a/CMakeFiles/edit_cache.dir
+/Users/robertpetro/Documents/GitHub/game-room/.utmp/RelWithDebInfo/1l6l1a54/arm64-v8a/CMakeFiles/rebuild_cache.dir
+/Users/robertpetro/Documents/GitHub/game-room/.utmp/RelWithDebInfo/1l6l1a54/arm64-v8a/GameActivity/CMakeFiles/game.dir
+/Users/robertpetro/Documents/GitHub/game-room/.utmp/RelWithDebInfo/1l6l1a54/arm64-v8a/GameActivity/CMakeFiles/edit_cache.dir
+/Users/robertpetro/Documents/GitHub/game-room/.utmp/RelWithDebInfo/1l6l1a54/arm64-v8a/GameActivity/CMakeFiles/rebuild_cache.dir
+/Users/robertpetro/Documents/GitHub/game-room/.utmp/RelWithDebInfo/1l6l1a54/arm64-v8a/FramePacing/CMakeFiles/swappywrapper.dir
+/Users/robertpetro/Documents/GitHub/game-room/.utmp/RelWithDebInfo/1l6l1a54/arm64-v8a/FramePacing/CMakeFiles/edit_cache.dir
+/Users/robertpetro/Documents/GitHub/game-room/.utmp/RelWithDebInfo/1l6l1a54/arm64-v8a/FramePacing/CMakeFiles/rebuild_cache.dir
