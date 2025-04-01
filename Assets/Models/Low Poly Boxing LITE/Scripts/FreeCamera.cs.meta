@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 03eb399a17a45dd498a5954e35094bd5
+timeCreated: 1465155393
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 133958
+  packageName: Low Poly Boxing LITE
+  packageVersion: 1.0
+  assetPath: Assets/Low Poly Boxing LITE/Scripts/FreeCamera.cs
+  uploadId: 280962
