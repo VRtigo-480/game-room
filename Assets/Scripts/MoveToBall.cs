@@ -9,6 +9,7 @@ public class MoveObject : MonoBehaviour
     public float speed = 10f;
     void Update()
     {
+        
         Vector3 targetPosition = targetObject.transform.position;
         Vector3 currentPosition = transform.position;
         targetPosition.x = currentPosition.x;

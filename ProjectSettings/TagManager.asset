@@ -8,6 +8,10 @@ TagManager:
   - Oppenent
   - AI
   - floor
+  - table
+  - player
+  - ptable
+  - otable
   layers:
   - Default
   - TransparentFX
