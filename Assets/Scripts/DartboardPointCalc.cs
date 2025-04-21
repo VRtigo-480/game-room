@@ -7,16 +7,6 @@ public class DartboardPointCalc : MonoBehaviour
     public int pointValue;
     public TextMeshProUGUI pointText;
 
-
-    public void OnCollisionEnter(Collision other) {
-        
-        if (other.gameObject.CompareTag("Dart")) {
-            int score = GetCurrentScore();
-            score += pointValue;
-            pointText.text = score.ToString();
-        } else return;
-    }
-
     private int GetCurrentScore() {
         string scoreText = pointText.text;
         if (scoreText.Length > 0) {

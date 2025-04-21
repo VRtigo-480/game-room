@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 6640996453043632194}
   - component: {fileID: 8008008530664861919}
   - component: {fileID: 347564853103836628}
-  - component: {fileID: 7393818315156412279}
+  - component: {fileID: 8330985963850470823}
   m_Layer: 0
   m_Name: Inner Bullseye
-  m_TagString: Untagged
+  m_TagString: DartZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111,7 +111,7 @@ CapsuleCollider:
   m_Height: 1.9999999
   m_Direction: 1
   m_Center: {x: -0.0000008940697, y: 0, z: 0.00000086426735}
---- !u!114 &7393818315156412279
+--- !u!114 &8330985963850470823
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -120,11 +120,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3863247124033544377}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 825a823faf2905d428a5a9f6f8c26400, type: 3}
+  m_Script: {fileID: 11500000, guid: 365f617eca4fe2641aa8afadaa6b7cb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pointValue: 0
-  pointText: {fileID: 0}
+  dartboard: {fileID: 0}
 --- !u!1 &8068691587158595451
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,10 +137,10 @@ GameObject:
   - component: {fileID: 1947419961605243575}
   - component: {fileID: 550298052544886317}
   - component: {fileID: 7507308604882112302}
-  - component: {fileID: 7133597110622914699}
+  - component: {fileID: 4359450921560278399}
   m_Layer: 0
   m_Name: Outer Bullseye
-  m_TagString: Untagged
+  m_TagString: DartZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -236,7 +236,7 @@ CapsuleCollider:
   m_Height: 1.9999999
   m_Direction: 1
   m_Center: {x: -0.0000008940697, y: 0, z: 0.00000086426735}
---- !u!114 &7133597110622914699
+--- !u!114 &4359450921560278399
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -245,11 +245,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 8068691587158595451}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 825a823faf2905d428a5a9f6f8c26400, type: 3}
+  m_Script: {fileID: 11500000, guid: 365f617eca4fe2641aa8afadaa6b7cb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pointValue: 0
-  pointText: {fileID: 0}
+  dartboard: {fileID: 0}
 --- !u!1001 &43523920254241173
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -258,22 +258,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2919844790439060261}
     m_Modifications:
-    - target: {fileID: 4934107673355324077, guid: 71ea145d41d47b44ea410f2a234e1d5b, type: 3}
-      propertyPath: m_CastShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4934107673355324077, guid: 71ea145d41d47b44ea410f2a234e1d5b, type: 3}
-      propertyPath: m_ReceiveShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5016271793581283714, guid: 71ea145d41d47b44ea410f2a234e1d5b, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5016271793581283714, guid: 71ea145d41d47b44ea410f2a234e1d5b, type: 3}
-      propertyPath: m_ProvidesContacts
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 482261194953987255, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+      propertyPath: dartboard
+      value: 
+      objectReference: {fileID: 6057629415230245423}
     - target: {fileID: 6067004100912902594, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
       propertyPath: m_LocalScale.x
       value: 35
@@ -330,46 +318,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dartboard Collider (4)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6879675837087492984, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1284453887433469144}
-  m_SourcePrefab: {fileID: 100100000, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
---- !u!4 &6100394884500093015 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6067004100912902594, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
-  m_PrefabInstance: {fileID: 43523920254241173}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &6909406381641343725 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6879675837087492984, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
-  m_PrefabInstance: {fileID: 43523920254241173}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1284453887433469144
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6909406381641343725}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 825a823faf2905d428a5a9f6f8c26400, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pointValue: 0
-  pointText: {fileID: 0}
---- !u!1001 &1173844309830819549
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 2919844790439060261}
-    m_Modifications:
+    - target: {fileID: 6879675837087492984, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+      propertyPath: m_TagString
+      value: DartZone
+      objectReference: {fileID: 0}
     - target: {fileID: 4934107673355324077, guid: 71ea145d41d47b44ea410f2a234e1d5b, type: 3}
       propertyPath: m_CastShadows
       value: 0
@@ -386,6 +338,33 @@ PrefabInstance:
       propertyPath: m_ProvidesContacts
       value: 0
       objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+--- !u!64 &4974155798394818583 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 5016271793581283714, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+  m_PrefabInstance: {fileID: 43523920254241173}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6100394884500093015 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6067004100912902594, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+  m_PrefabInstance: {fileID: 43523920254241173}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1173844309830819549
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2919844790439060261}
+    m_Modifications:
+    - target: {fileID: 482261194953987255, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+      propertyPath: dartboard
+      value: 
+      objectReference: {fileID: 6057629415230245423}
     - target: {fileID: 6067004100912902594, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
       propertyPath: m_LocalScale.x
       value: 35
@@ -442,46 +421,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dartboard Collider (5)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6879675837087492984, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3524188197233386775}
-  m_SourcePrefab: {fileID: 100100000, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
---- !u!4 &4933694748605296415 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6067004100912902594, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
-  m_PrefabInstance: {fileID: 1173844309830819549}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &5707135601198003621 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6879675837087492984, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
-  m_PrefabInstance: {fileID: 1173844309830819549}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &3524188197233386775
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5707135601198003621}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 825a823faf2905d428a5a9f6f8c26400, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pointValue: 0
-  pointText: {fileID: 0}
---- !u!1001 &1978510387712119730
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 2919844790439060261}
-    m_Modifications:
+    - target: {fileID: 6879675837087492984, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+      propertyPath: m_TagString
+      value: DartZone
+      objectReference: {fileID: 0}
     - target: {fileID: 4934107673355324077, guid: 71ea145d41d47b44ea410f2a234e1d5b, type: 3}
       propertyPath: m_CastShadows
       value: 0
@@ -498,6 +441,33 @@ PrefabInstance:
       propertyPath: m_ProvidesContacts
       value: 0
       objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+--- !u!4 &4933694748605296415 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6067004100912902594, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+  m_PrefabInstance: {fileID: 1173844309830819549}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &6185471644390983519 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 5016271793581283714, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+  m_PrefabInstance: {fileID: 1173844309830819549}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1978510387712119730
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2919844790439060261}
+    m_Modifications:
+    - target: {fileID: 482261194953987255, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+      propertyPath: dartboard
+      value: 
+      objectReference: {fileID: 6057629415230245423}
     - target: {fileID: 6067004100912902594, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
       propertyPath: m_LocalScale.x
       value: 35
@@ -554,46 +524,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dartboard Collider (6)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6879675837087492984, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4644703756992583857}
-  m_SourcePrefab: {fileID: 100100000, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
---- !u!1 &4903452485369231562 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6879675837087492984, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
-  m_PrefabInstance: {fileID: 1978510387712119730}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &4644703756992583857
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4903452485369231562}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 825a823faf2905d428a5a9f6f8c26400, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pointValue: 0
-  pointText: {fileID: 0}
---- !u!4 &5712605720390673008 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6067004100912902594, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
-  m_PrefabInstance: {fileID: 1978510387712119730}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &2205193888164950664
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 2919844790439060261}
-    m_Modifications:
+    - target: {fileID: 6879675837087492984, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+      propertyPath: m_TagString
+      value: DartZone
+      objectReference: {fileID: 0}
     - target: {fileID: 4934107673355324077, guid: 71ea145d41d47b44ea410f2a234e1d5b, type: 3}
       propertyPath: m_CastShadows
       value: 0
@@ -610,6 +544,33 @@ PrefabInstance:
       propertyPath: m_ProvidesContacts
       value: 0
       objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+--- !u!4 &5712605720390673008 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6067004100912902594, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+  m_PrefabInstance: {fileID: 1978510387712119730}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &6838843755705469488 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 5016271793581283714, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+  m_PrefabInstance: {fileID: 1978510387712119730}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2205193888164950664
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2919844790439060261}
+    m_Modifications:
+    - target: {fileID: 482261194953987255, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+      propertyPath: dartboard
+      value: 
+      objectReference: {fileID: 6057629415230245423}
     - target: {fileID: 6067004100912902594, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
       propertyPath: m_LocalScale.x
       value: 35
@@ -666,46 +627,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dartboard Collider (7)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6879675837087492984, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7991175825569244142}
-  m_SourcePrefab: {fileID: 100100000, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
---- !u!1 &4747894142109948400 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6879675837087492984, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
-  m_PrefabInstance: {fileID: 2205193888164950664}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &7991175825569244142
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4747894142109948400}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 825a823faf2905d428a5a9f6f8c26400, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pointValue: 0
-  pointText: {fileID: 0}
---- !u!4 &5379611591705576266 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6067004100912902594, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
-  m_PrefabInstance: {fileID: 2205193888164950664}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &2831284982576058604
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 2919844790439060261}
-    m_Modifications:
+    - target: {fileID: 6879675837087492984, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+      propertyPath: m_TagString
+      value: DartZone
+      objectReference: {fileID: 0}
     - target: {fileID: 4934107673355324077, guid: 71ea145d41d47b44ea410f2a234e1d5b, type: 3}
       propertyPath: m_CastShadows
       value: 0
@@ -722,6 +647,33 @@ PrefabInstance:
       propertyPath: m_ProvidesContacts
       value: 0
       objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+--- !u!4 &5379611591705576266 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6067004100912902594, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+  m_PrefabInstance: {fileID: 2205193888164950664}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &6559225358881024778 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 5016271793581283714, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+  m_PrefabInstance: {fileID: 2205193888164950664}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2831284982576058604
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2919844790439060261}
+    m_Modifications:
+    - target: {fileID: 482261194953987255, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+      propertyPath: dartboard
+      value: 
+      objectReference: {fileID: 6057629415230245423}
     - target: {fileID: 6067004100912902594, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
       propertyPath: m_LocalScale.x
       value: 35
@@ -778,46 +730,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dartboard Collider (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6879675837087492984, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5804795790823381051}
-  m_SourcePrefab: {fileID: 100100000, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
---- !u!4 &8320658305984258350 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6067004100912902594, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
-  m_PrefabInstance: {fileID: 2831284982576058604}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &8661330321295817620 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6879675837087492984, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
-  m_PrefabInstance: {fileID: 2831284982576058604}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &5804795790823381051
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8661330321295817620}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 825a823faf2905d428a5a9f6f8c26400, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pointValue: 0
-  pointText: {fileID: 0}
---- !u!1001 &3309627734559134402
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 2919844790439060261}
-    m_Modifications:
+    - target: {fileID: 6879675837087492984, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+      propertyPath: m_TagString
+      value: DartZone
+      objectReference: {fileID: 0}
     - target: {fileID: 4934107673355324077, guid: 71ea145d41d47b44ea410f2a234e1d5b, type: 3}
       propertyPath: m_CastShadows
       value: 0
@@ -834,6 +750,33 @@ PrefabInstance:
       propertyPath: m_ProvidesContacts
       value: 0
       objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+--- !u!64 &7122405627768424814 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 5016271793581283714, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+  m_PrefabInstance: {fileID: 2831284982576058604}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8320658305984258350 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6067004100912902594, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+  m_PrefabInstance: {fileID: 2831284982576058604}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3309627734559134402
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2919844790439060261}
+    m_Modifications:
+    - target: {fileID: 482261194953987255, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+      propertyPath: dartboard
+      value: 
+      objectReference: {fileID: 6057629415230245423}
     - target: {fileID: 6067004100912902594, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
       propertyPath: m_LocalScale.x
       value: 35
@@ -890,33 +833,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dartboard Collider (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6879675837087492984, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+      propertyPath: m_TagString
+      value: DartZone
+      objectReference: {fileID: 0}
+    - target: {fileID: 4934107673355324077, guid: 71ea145d41d47b44ea410f2a234e1d5b, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4934107673355324077, guid: 71ea145d41d47b44ea410f2a234e1d5b, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016271793581283714, guid: 71ea145d41d47b44ea410f2a234e1d5b, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016271793581283714, guid: 71ea145d41d47b44ea410f2a234e1d5b, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6879675837087492984, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5057188333980808018}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
---- !u!1 &8257257948487465402 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6879675837087492984, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+--- !u!64 &7526439107196930880 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 5016271793581283714, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
   m_PrefabInstance: {fileID: 3309627734559134402}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5057188333980808018
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8257257948487465402}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 825a823faf2905d428a5a9f6f8c26400, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pointValue: 0
-  pointText: {fileID: 0}
 --- !u!4 &8781030771296953088 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6067004100912902594, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
@@ -1069,8 +1015,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f273d22e4ed132c40b102684c3e52344, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravityZones: []
+  dartZones:
+  - collider: {fileID: 2709734262008532895}
+    gravityValue: 0
+  - collider: {fileID: 4974155798394818583}
+    gravityValue: 0
+  - collider: {fileID: 944069671589311398}
+    gravityValue: 0
+  - collider: {fileID: 6185471644390983519}
+    gravityValue: 0
+  - collider: {fileID: 2517601691257252468}
+    gravityValue: 0
+  - collider: {fileID: 6838843755705469488}
+    gravityValue: 0
+  - collider: {fileID: 8829713198759276815}
+    gravityValue: 0
+  - collider: {fileID: 6559225358881024778}
+    gravityValue: 0
+  - collider: {fileID: 7122405627768424814}
+    gravityValue: 0
+  - collider: {fileID: 2684203341330616324}
+    gravityValue: 0
+  - collider: {fileID: 450615194089614091}
+    gravityValue: 0
+  - collider: {fileID: 7526439107196930880}
+    gravityValue: 0
+  - collider: {fileID: 7507308604882112302}
+    gravityValue: 0
+  - collider: {fileID: 347564853103836628}
+    gravityValue: 0
+  - collider: {fileID: 0}
+    gravityValue: 0
   influenceRadius: 0.2
+  pointText: {fileID: 0}
 --- !u!4 &2919844790439060261 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 95f1880c71ff15745b03bb00765cdb30, type: 3}
@@ -1084,22 +1061,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2919844790439060261}
     m_Modifications:
-    - target: {fileID: 4934107673355324077, guid: 71ea145d41d47b44ea410f2a234e1d5b, type: 3}
-      propertyPath: m_CastShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4934107673355324077, guid: 71ea145d41d47b44ea410f2a234e1d5b, type: 3}
-      propertyPath: m_ReceiveShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5016271793581283714, guid: 71ea145d41d47b44ea410f2a234e1d5b, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5016271793581283714, guid: 71ea145d41d47b44ea410f2a234e1d5b, type: 3}
-      propertyPath: m_ProvidesContacts
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 482261194953987255, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+      propertyPath: dartboard
+      value: 
+      objectReference: {fileID: 6057629415230245423}
     - target: {fileID: 6067004100912902594, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
       propertyPath: m_LocalScale.x
       value: 35
@@ -1156,46 +1121,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dartboard Collider (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6879675837087492984, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6710689714196887313}
-  m_SourcePrefab: {fileID: 100100000, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
---- !u!1 &6948374144590709749 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6879675837087492984, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
-  m_PrefabInstance: {fileID: 4545277445248821389}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6710689714196887313
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6948374144590709749}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 825a823faf2905d428a5a9f6f8c26400, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pointValue: 0
-  pointText: {fileID: 0}
---- !u!4 &7720935392109058383 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6067004100912902594, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
-  m_PrefabInstance: {fileID: 4545277445248821389}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &4890215128058016393
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 2919844790439060261}
-    m_Modifications:
+    - target: {fileID: 6879675837087492984, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+      propertyPath: m_TagString
+      value: DartZone
+      objectReference: {fileID: 0}
     - target: {fileID: 4934107673355324077, guid: 71ea145d41d47b44ea410f2a234e1d5b, type: 3}
       propertyPath: m_CastShadows
       value: 0
@@ -1212,6 +1141,33 @@ PrefabInstance:
       propertyPath: m_ProvidesContacts
       value: 0
       objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+--- !u!4 &7720935392109058383 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6067004100912902594, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+  m_PrefabInstance: {fileID: 4545277445248821389}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &8829713198759276815 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 5016271793581283714, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+  m_PrefabInstance: {fileID: 4545277445248821389}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4890215128058016393
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2919844790439060261}
+    m_Modifications:
+    - target: {fileID: 482261194953987255, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+      propertyPath: dartboard
+      value: 
+      objectReference: {fileID: 6057629415230245423}
     - target: {fileID: 6067004100912902594, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
       propertyPath: m_LocalScale.x
       value: 35
@@ -1268,46 +1224,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dartboard Collider (10)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6879675837087492984, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5524209401532158592}
-  m_SourcePrefab: {fileID: 100100000, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
---- !u!4 &1724839805057221451 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6067004100912902594, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
-  m_PrefabInstance: {fileID: 4890215128058016393}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2063787751707482609 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6879675837087492984, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
-  m_PrefabInstance: {fileID: 4890215128058016393}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &5524209401532158592
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2063787751707482609}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 825a823faf2905d428a5a9f6f8c26400, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pointValue: 0
-  pointText: {fileID: 0}
---- !u!1001 &5226254483242461732
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 2919844790439060261}
-    m_Modifications:
+    - target: {fileID: 6879675837087492984, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+      propertyPath: m_TagString
+      value: DartZone
+      objectReference: {fileID: 0}
     - target: {fileID: 4934107673355324077, guid: 71ea145d41d47b44ea410f2a234e1d5b, type: 3}
       propertyPath: m_CastShadows
       value: 0
@@ -1324,6 +1244,33 @@ PrefabInstance:
       propertyPath: m_ProvidesContacts
       value: 0
       objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+--- !u!64 &450615194089614091 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 5016271793581283714, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+  m_PrefabInstance: {fileID: 4890215128058016393}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1724839805057221451 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6067004100912902594, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+  m_PrefabInstance: {fileID: 4890215128058016393}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5226254483242461732
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2919844790439060261}
+    m_Modifications:
+    - target: {fileID: 482261194953987255, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+      propertyPath: dartboard
+      value: 
+      objectReference: {fileID: 6057629415230245423}
     - target: {fileID: 6067004100912902594, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
       propertyPath: m_LocalScale.x
       value: 35
@@ -1380,46 +1327,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dartboard Collider (11)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6879675837087492984, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 786689440261115473}
-  m_SourcePrefab: {fileID: 100100000, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
---- !u!1 &1729072720697983324 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6879675837087492984, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
-  m_PrefabInstance: {fileID: 5226254483242461732}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &786689440261115473
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1729072720697983324}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 825a823faf2905d428a5a9f6f8c26400, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pointValue: 0
-  pointText: {fileID: 0}
---- !u!4 &2068619900468190182 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6067004100912902594, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
-  m_PrefabInstance: {fileID: 5226254483242461732}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &6919649342055781917
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 2919844790439060261}
-    m_Modifications:
+    - target: {fileID: 6879675837087492984, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+      propertyPath: m_TagString
+      value: DartZone
+      objectReference: {fileID: 0}
     - target: {fileID: 4934107673355324077, guid: 71ea145d41d47b44ea410f2a234e1d5b, type: 3}
       propertyPath: m_CastShadows
       value: 0
@@ -1436,6 +1347,33 @@ PrefabInstance:
       propertyPath: m_ProvidesContacts
       value: 0
       objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+--- !u!64 &944069671589311398 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 5016271793581283714, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+  m_PrefabInstance: {fileID: 5226254483242461732}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2068619900468190182 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6067004100912902594, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+  m_PrefabInstance: {fileID: 5226254483242461732}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6919649342055781917
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2919844790439060261}
+    m_Modifications:
+    - target: {fileID: 482261194953987255, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+      propertyPath: dartboard
+      value: 
+      objectReference: {fileID: 6057629415230245423}
     - target: {fileID: 6067004100912902594, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
       propertyPath: m_LocalScale.x
       value: 35
@@ -1492,46 +1430,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dartboard Collider
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6879675837087492984, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6733342728989912457}
-  m_SourcePrefab: {fileID: 100100000, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
---- !u!4 &3762155505888290783 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6067004100912902594, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
-  m_PrefabInstance: {fileID: 6919649342055781917}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &4575108373660319077 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6879675837087492984, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
-  m_PrefabInstance: {fileID: 6919649342055781917}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6733342728989912457
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4575108373660319077}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 825a823faf2905d428a5a9f6f8c26400, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pointValue: 0
-  pointText: {fileID: 0}
---- !u!1001 &6979827536219130246
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 2919844790439060261}
-    m_Modifications:
+    - target: {fileID: 6879675837087492984, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+      propertyPath: m_TagString
+      value: DartZone
+      objectReference: {fileID: 0}
     - target: {fileID: 4934107673355324077, guid: 71ea145d41d47b44ea410f2a234e1d5b, type: 3}
       propertyPath: m_CastShadows
       value: 0
@@ -1548,6 +1450,33 @@ PrefabInstance:
       propertyPath: m_ProvidesContacts
       value: 0
       objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+--- !u!64 &2709734262008532895 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 5016271793581283714, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+  m_PrefabInstance: {fileID: 6919649342055781917}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3762155505888290783 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6067004100912902594, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+  m_PrefabInstance: {fileID: 6919649342055781917}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6979827536219130246
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2919844790439060261}
+    m_Modifications:
+    - target: {fileID: 482261194953987255, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+      propertyPath: dartboard
+      value: 
+      objectReference: {fileID: 6057629415230245423}
     - target: {fileID: 6067004100912902594, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
       propertyPath: m_LocalScale.x
       value: 35
@@ -1604,46 +1533,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dartboard Collider (8)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6879675837087492984, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2120934678809129866}
-  m_SourcePrefab: {fileID: 100100000, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
---- !u!4 &3814267667172603972 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6067004100912902594, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
-  m_PrefabInstance: {fileID: 6979827536219130246}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &4586019640125481726 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6879675837087492984, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
-  m_PrefabInstance: {fileID: 6979827536219130246}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2120934678809129866
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4586019640125481726}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 825a823faf2905d428a5a9f6f8c26400, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pointValue: 0
-  pointText: {fileID: 0}
---- !u!1001 &7452667900872553462
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 2919844790439060261}
-    m_Modifications:
+    - target: {fileID: 6879675837087492984, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+      propertyPath: m_TagString
+      value: DartZone
+      objectReference: {fileID: 0}
     - target: {fileID: 4934107673355324077, guid: 71ea145d41d47b44ea410f2a234e1d5b, type: 3}
       propertyPath: m_CastShadows
       value: 0
@@ -1660,6 +1553,33 @@ PrefabInstance:
       propertyPath: m_ProvidesContacts
       value: 0
       objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+--- !u!64 &2684203341330616324 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 5016271793581283714, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+  m_PrefabInstance: {fileID: 6979827536219130246}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3814267667172603972 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6067004100912902594, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+  m_PrefabInstance: {fileID: 6979827536219130246}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7452667900872553462
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2919844790439060261}
+    m_Modifications:
+    - target: {fileID: 482261194953987255, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+      propertyPath: dartboard
+      value: 
+      objectReference: {fileID: 6057629415230245423}
     - target: {fileID: 6067004100912902594, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
       propertyPath: m_LocalScale.x
       value: 35
@@ -1716,35 +1636,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dartboard Collider (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 6879675837087492984, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+      propertyPath: m_TagString
+      value: DartZone
+      objectReference: {fileID: 0}
+    - target: {fileID: 4934107673355324077, guid: 71ea145d41d47b44ea410f2a234e1d5b, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4934107673355324077, guid: 71ea145d41d47b44ea410f2a234e1d5b, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016271793581283714, guid: 71ea145d41d47b44ea410f2a234e1d5b, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016271793581283714, guid: 71ea145d41d47b44ea410f2a234e1d5b, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6879675837087492984, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 864808918790786806}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+--- !u!64 &2517601691257252468 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 5016271793581283714, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
+  m_PrefabInstance: {fileID: 7452667900872553462}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3701789489748148788 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6067004100912902594, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
   m_PrefabInstance: {fileID: 7452667900872553462}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &4041054056620677262 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6879675837087492984, guid: faf6f061352c3a7458afa5d190aab791, type: 3}
-  m_PrefabInstance: {fileID: 7452667900872553462}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &864808918790786806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4041054056620677262}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 825a823faf2905d428a5a9f6f8c26400, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pointValue: 0
-  pointText: {fileID: 0}

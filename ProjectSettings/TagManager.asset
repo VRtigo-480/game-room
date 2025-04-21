@@ -13,6 +13,7 @@ TagManager:
   - ptable
   - otable
   - PunchingBag
+  - DartZone
   layers:
   - Default
   - TransparentFX

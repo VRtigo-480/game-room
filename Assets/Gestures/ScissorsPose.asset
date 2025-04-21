@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 740f51a1ac4b42088297287229057627, type: 3}
   m_Name: ScissorsPose
   m_EditorClassIdentifier: 
-  m_HandShape: {fileID: 11400000, guid: 68e255976d9a8404f8f71c9fbbc1ebf8, type: 2}
+  m_HandShape: {fileID: 11400000, guid: bb17e4b4ab98181418219bbe3fee779c, type: 2}
   m_RelativeOrientation:
     m_UserConditions:
     - m_HandAxis: 0

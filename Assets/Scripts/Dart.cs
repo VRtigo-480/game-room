@@ -1,35 +1,32 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.XR.Interaction.Toolkit.Interactors;
+using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 
 
 public class Dart : MonoBehaviour {
   
   [SerializeField] private bool gestureActive = false;
-  public Transform handAttach;
-  public Transform dartAttach;
+  private Rigidbody rb;
 
-  public void GrabDart() {
-    transform.position = handAttach.position - (dartAttach.position - transform.position);
-    transform.rotation = handAttach.rotation * Quaternion.Inverse(dartAttach.localRotation);
-    transform.SetParent(handAttach);
-  }
-
-  public void LetGo() {
-    Debug.Log("Let go");
-  }
   void Start() {
-    if (dartAttach == null) {
-      dartAttach = transform.Find("AttachPoint");
+    rb = GetComponent<Rigidbody>();
+  }
+
+  public void OnCollisionEnter(Collision collision) {
+    if (collision.gameObject.CompareTag("DartZone")) {
+      rb.isKinematic = true;
+      
+      rb.useGravity = false;
+      transform.parent = collision.transform;
+      collision.transform.GetComponent<DartZone>().IncrementScore();
     }
   }
 
-  public void ActivateGesture() {
-    gestureActive = true;
-  }
+  public void LaunchDart() {
 
-  public void DeactivateGesture() {
-    gestureActive = false;
   }
 }

@@ -150,3 +150,7 @@ $RECYCLE.BIN/
 
 # Avoid committing large assets
 /[Aa]ssets/[Ll]arge[Aa]ssets/
+
+
+
+/Build/*
