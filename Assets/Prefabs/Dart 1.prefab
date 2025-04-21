@@ -144,6 +144,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c829d2fbe160fe145abbfa434e076eff, type: 3}
       insertIndex: -1
       addedObject: {fileID: 29286308423384724}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c829d2fbe160fe145abbfa434e076eff, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4919426277424024042}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c829d2fbe160fe145abbfa434e076eff, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3950718847294664110}
   m_SourcePrefab: {fileID: 100100000, guid: c829d2fbe160fe145abbfa434e076eff, type: 3}
 --- !u!4 &416871895680574075 stripped
 Transform:
@@ -304,3 +310,40 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 0
+--- !u!64 &4919426277424024042
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1045633819900786881}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
+--- !u!114 &3950718847294664110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1045633819900786881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5751a82fc771ef040b68956d3b872abf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gestureActive: 0
+  handAttach: {fileID: 0}
+  dartAttach: {fileID: 5033815177417417012}
