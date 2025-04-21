@@ -7,6 +7,7 @@ public class MotionDetector : MonoBehaviour
     public AudioSource motionStartSound;
 
     private bool wasMovingLastFrame = false;
+    private bool canSound = true;
 
     void Update()
     {
@@ -19,10 +20,11 @@ public class MotionDetector : MonoBehaviour
         bool isMovingNow = targetRigidbody.linearVelocity.magnitude > velocityThreshold;
 
         // Detect when motion begins
-        if (!wasMovingLastFrame && isMovingNow)
+        if (!wasMovingLastFrame && isMovingNow && canSound)
         {
             motionStartSound.Play();
             Debug.Log($"{targetRigidbody.name} started moving.");
+            canSound = false;
         }
 
         wasMovingLastFrame = isMovingNow;
