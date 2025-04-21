@@ -30,7 +30,7 @@ public class PunchDetector : MonoBehaviour
         lastPosition = handVisual.position;
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collider other)
     {
         if (other.CompareTag("PunchingBag"))
         {
