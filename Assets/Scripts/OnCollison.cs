@@ -9,6 +9,7 @@ public class OnCollisionBounce : MonoBehaviour
     public GameObject resetPosition;
     public TextMeshPro ptext;
     public TextMeshPro otext;
+    public GameObject player;
 
     private Rigidbody rb;
     private bool isPlayer = true;
@@ -32,6 +33,7 @@ public class OnCollisionBounce : MonoBehaviour
             Vector3 randomPoint = GetRandomPointInArea();
             Vector3 direction = (randomPoint - transform.position).normalized;
             rb.linearVelocity = direction * launchForce;
+            rb.linearVelocity = -rb.linearVelocity;
         }
         if (collision.gameObject.CompareTag("floor"))
         {

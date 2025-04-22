@@ -2528,13 +2528,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ping Pong Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 6329131742731035237, guid: e780f46c863e243e2bfe4c04deaea467, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6329131742731035237, guid: e780f46c863e243e2bfe4c04deaea467, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6329131742731035237, guid: e780f46c863e243e2bfe4c04deaea467, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7915180491231706180, guid: e780f46c863e243e2bfe4c04deaea467, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.4036293
       objectReference: {fileID: 0}
     - target: {fileID: 7915180491231706180, guid: e780f46c863e243e2bfe4c04deaea467, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11.510649
+      value: 11.925
       objectReference: {fileID: 0}
     - target: {fileID: 7915180491231706180, guid: e780f46c863e243e2bfe4c04deaea467, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3100,7 +3112,19 @@ PrefabInstance:
     - target: {fileID: 726079139407410117, guid: f49f097561511dd499970e7f53740fdd, type: 3}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 13400000, guid: c5c2c36bce53942189f9455f9a3122dd, type: 2}
+      objectReference: {fileID: 0}
+    - target: {fileID: 726079139407410118, guid: f49f097561511dd499970e7f53740fdd, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 726079139407410118, guid: f49f097561511dd499970e7f53740fdd, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 726079139407410118, guid: f49f097561511dd499970e7f53740fdd, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5722168504380414926, guid: f49f097561511dd499970e7f53740fdd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.5873222
@@ -4586,6 +4610,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ping Pong Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 6329131742731035237, guid: e780f46c863e243e2bfe4c04deaea467, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7915180491231706180, guid: e780f46c863e243e2bfe4c04deaea467, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.4036293
@@ -4661,6 +4689,7 @@ MonoBehaviour:
   resetPosition: {fileID: 1877326206}
   ptext: {fileID: 1957805783}
   otext: {fileID: 865664344}
+  player: {fileID: 0}
 --- !u!4 &740359024 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 7f460fda04966224c86af5609e2054f1, type: 3}
@@ -4910,6 +4939,7 @@ MonoBehaviour:
   resetPosition: {fileID: 1983563118}
   ptext: {fileID: 1511803384}
   otext: {fileID: 1482721446}
+  player: {fileID: 0}
 --- !u!1 &801348017
 GameObject:
   m_ObjectHideFlags: 0
@@ -6462,6 +6492,10 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 13400000, guid: c5c2c36bce53942189f9455f9a3122dd, type: 2}
+    - target: {fileID: 726079139407410118, guid: f49f097561511dd499970e7f53740fdd, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5722168504380414926, guid: f49f097561511dd499970e7f53740fdd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.5873222
@@ -8430,7 +8464,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetObject: {fileID: 800143752}
-  speed: 5
+  speed: 10
 --- !u!1001 &1200349514
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12628,7 +12662,7 @@ GameObject:
   - component: {fileID: 2040856915}
   - component: {fileID: 2040856914}
   m_Layer: 0
-  m_Name: Rock
+  m_Name: Walk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
