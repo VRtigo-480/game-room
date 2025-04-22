@@ -15,8 +15,8 @@ public class OnCollisionBounce : MonoBehaviour
     private bool isAI = false;
     private bool pTable = false;
     private bool oTable = false;
-    private int pScore;
-    private int oScore;
+    private int pScore = 0;
+    private int oScore = -1;
 
     void Start()
     {
