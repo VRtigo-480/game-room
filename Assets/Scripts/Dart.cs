@@ -11,12 +11,13 @@ public class Dart : MonoBehaviour {
   
   [SerializeField] private bool gestureActive = false;
   private Rigidbody rb;
+  public float thrust = 10.0f;
 
   void Start() {
     rb = GetComponent<Rigidbody>();
   }
 
-  public void OnCollisionEnter(Collision collision) {
+  void OnCollisionEnter(Collision collision) {
     if (collision.gameObject.CompareTag("DartZone")) {
       rb.isKinematic = true;
       
@@ -27,6 +28,8 @@ public class Dart : MonoBehaviour {
   }
 
   public void LaunchDart() {
-
+    // rb.useGravity = true;
+    rb.isKinematic = false;
+    rb.AddForce(-transform.up * thrust);
   }
 }
