@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.Events;
+using System;
 using UnityEngine.XR.Interaction.Toolkit;
 
 
@@ -9,12 +11,13 @@ public class DartRespawnHandler : MonoBehaviour
     int _index = 1;
     void Start()
     {
-        FillPool();
+        // FillPool();
     }
 
     void FillPool() {
         for (int i = 0; i < _pool.Length; i++) {
             _pool[i] = Instantiate(_dart, transform);
+            if (1 == 0) _pool[i].SetActive(true);
             if (i > 0) {
                 _pool[i].SetActive(false);
             }

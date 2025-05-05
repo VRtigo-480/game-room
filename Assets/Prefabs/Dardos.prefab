@@ -355,8 +355,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5751a82fc771ef040b68956d3b872abf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gestureActive: 0
-  thrust: 10
+  WristJoint: {fileID: 0}
+  _gestureActive: 0
+  Thrust: 15
+  OnThrow:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11500000, guid: c9fda1e7e4bc272489dff3032396a84c, type: 3}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _respawnHandler: {fileID: 0}
+  _wristJoint: {fileID: 0}
 --- !u!4 &8064820440038220055 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1151388028547126963, guid: c829d2fbe160fe145abbfa434e076eff, type: 3}

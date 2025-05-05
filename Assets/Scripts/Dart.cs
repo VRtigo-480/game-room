@@ -22,23 +22,31 @@ public class Dart : MonoBehaviour {
   private float _velocityMagnitude = 0f;
   private Vector3 _lastPosition;
   public UnityEvent OnThrow;
+  [SerializeField] DartRespawnHandler _respawnHandler;
+  [SerializeField] Transform _wristJoint;
   public Rigidbody RB { get { return _rb; } }
 
   public bool IsKinematic { set { _rb.isKinematic = value; }}
   public bool UseGravity { set { _rb.useGravity = value; }}
 
 
-  void Start() {
+  void Awake() {
+    // _respawnHandler = GameObject.Find("DartRespawn").GetComponent<DartRespawnHandler>();;
+    // _wristJoint = GameObject.Find("R_wrist").transform;
     _rb = GetComponent<Rigidbody>();
+  }
+  void Start() {
+    LaunchDart();
 
-    _lastPosition = WristJoint.position;
+
+    _lastPosition = _wristJoint.position;
   }
 
    void Update()
     {
-        Vector3 velocity = (WristJoint.position - _lastPosition) / Time.deltaTime;
+        Vector3 velocity = (_wristJoint.position - _lastPosition) / Time.deltaTime;
         _velocityMagnitude = velocity.magnitude;
-        _lastPosition = WristJoint.position;
+        _lastPosition = _wristJoint.position;
     }
 
   void OnCollisionEnter(Collision collision) {
