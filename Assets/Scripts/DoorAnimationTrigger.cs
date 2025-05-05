@@ -3,16 +3,20 @@ using UnityEngine;
 public class DoorAnimationTrigger : MonoBehaviour
 {
     public Animator animator;
-    public string animationTriggerName = "Door_animation"; // Set this in Animator
+    public Transform handTransform; // Assign the XR hand transform
+    public float triggerDistance = 0.1f;
+    private bool hasTriggered = false;
 
-    private void OnTriggerEnter(Collider other)
+    void Update()
     {
-        if (other.gameObject.name.Contains("Hand")) // XRHand joints are often named like "RightHand", "LeftHand"
+        if (!hasTriggered && Vector3.Distance(transform.position, handTransform.position) < triggerDistance)
         {
-            animator.SetTrigger(animationTriggerName);
+            animator.SetTrigger("Activate");
+            hasTriggered = true;
         }
     }
 }
+
 
 
 
