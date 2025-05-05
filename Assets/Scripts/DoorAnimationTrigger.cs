@@ -12,7 +12,7 @@ public class DoorAnimationTrigger : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (!hasOpened)
+        if (!hasOpened && other.CompareTag("Hand"))
         {
             animator.Play("Door_animation");
             hasOpened = true;
