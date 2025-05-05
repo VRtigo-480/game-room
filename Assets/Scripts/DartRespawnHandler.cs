@@ -4,46 +4,46 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class DartRespawnHandler : MonoBehaviour
 {
-    public GameObject prefab;
-    private Transform attachPoint;
-    private GameObject spawnedObject;
-    public float degreesPerSecond = 2.0f;
-    public int hoverPos = 0;
+    [SerializeField] GameObject _dart;
+    [SerializeField] GameObject[] _pool;
+    int _index = 1;
     void Start()
     {
-        SpawnPrefab();
+        FillPool();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        Vector3 offset = transform.position - attachPoint.position;
-        spawnedObject.transform.position = Vector3.Lerp(
-            spawnedObject.transform.position,
-            spawnedObject.transform.position + offset,
-            Time.deltaTime * degreesPerSecond
-        );
-        gameObject.transform.Rotate(0, degreesPerSecond * Time.deltaTime, 0);
+    void FillPool() {
+        for (int i = 0; i < _pool.Length; i++) {
+            _pool[i] = Instantiate(_dart, transform);
+            if (i > 0) {
+                _pool[i].SetActive(false);
+            }
+
+        }
     }
 
-    public void OnCollisionExit(Collision other) {
-        if (other.gameObject.CompareTag("Dart")) SpawnPrefab();
+    public void ActivateNextDart() {
+        if (_index < _pool.Length) _pool[_index++].SetActive(true);
     }
 
-    public void SpawnPrefab() {
-        spawnedObject = Instantiate(prefab, transform);
-        attachPoint = spawnedObject.transform.Find("Attach Point");
-        spawnedObject.transform.localPosition = new Vector3(0, hoverPos, 0);
+    public void RespawnDarts() {
+        FillPool();
     }
 
-    public void OnGrab(SelectEnterEventArgs args) {
-        spawnedObject.transform.parent = null;
-        Rigidbody rb = spawnedObject.GetComponent<Rigidbody>();
-        if (rb) rb.isKinematic = false;
+    public void ResetDarts() {
+        Debug.Log("Resetting");
+
+        for (int i = 0; i < _pool.Length; i++) {
+            _pool[i].transform.position = transform.position;
+            Rigidbody rb = _pool[i].GetComponentInChildren<Rigidbody>();
+            rb.gameObject.transform.position = transform.position;
+            if (i > 0) {
+
+                _pool[i].SetActive(false);
+            }
+            rb.useGravity = false;
+            rb.isKinematic = true;
+        }
     }
 
-    void OnRelease(SelectExitEventArgs args)
-    {
-        return;
-    }
 }
