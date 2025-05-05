@@ -34,13 +34,15 @@ public class DartRespawnHandler : MonoBehaviour
         Debug.Log("Resetting");
 
         for (int i = 0; i < _pool.Length; i++) {
-            _pool[i].transform.localPosition = Vector3.zero;
+            _pool[i].transform.position = transform.position;
+            Rigidbody rb = _pool[i].GetComponentInChildren<Rigidbody>();
+            rb.gameObject.transform.position = transform.position;
             if (i > 0) {
-                _pool[i].useGravity = false;
-                _pool[i].isKinematic = true;
+
                 _pool[i].SetActive(false);
             }
-
+            rb.useGravity = false;
+            rb.isKinematic = true;
         }
     }
 
