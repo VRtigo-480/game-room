@@ -2,31 +2,16 @@ using UnityEngine;
 
 public class MotionDetector : MonoBehaviour
 {
-    public Rigidbody targetRigidbody;
-    public float velocityThreshold = 0.01f; // Minimum velocity to be considered moving
-    public AudioSource motionStartSound;
+    public AudioSource sound;
+    public float cooldownDuration = 0.7f;
 
-    private bool wasMovingLastFrame = false;
-    private bool canSound = true;
+    private float lastPlayTime = -Mathf.Infinity;
 
-    void Update()
+    void OnCollisionEnter(Collision collision)
     {
-        if (targetRigidbody == null || motionStartSound == null)
-        {
-            Debug.LogWarning("MotionDetector: Missing Rigidbody or AudioSource reference.");
-            return;
+        if (collision.gameObject.CompareTag("PunchingBag")) {
+            sound.Play();
+            lastPlayTime = Time.time;
         }
-
-        bool isMovingNow = targetRigidbody.linearVelocity.magnitude > velocityThreshold;
-
-        // Detect when motion begins
-        if (!wasMovingLastFrame && isMovingNow && canSound)
-        {
-            motionStartSound.Play();
-            Debug.Log($"{targetRigidbody.name} started moving.");
-            canSound = false;
-        }
-
-        wasMovingLastFrame = isMovingNow;
     }
 }
