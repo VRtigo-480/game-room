@@ -6,7 +6,7 @@ using Unity.XR.CoreUtils;
 public class Walking : MonoBehaviour
 {
     public XROrigin xrOrigin;
-    public float moveSpeed = 2.5f;
+    public float moveSpeed = 2.0f;
     public bool gestureactive = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

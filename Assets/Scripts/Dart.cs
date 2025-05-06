@@ -36,7 +36,7 @@ public class Dart : MonoBehaviour {
     _rb = GetComponent<Rigidbody>();
   }
   void Start() {
-    LaunchDart();
+   // LaunchDart();
 
 
     _lastPosition = _wristJoint.position;
