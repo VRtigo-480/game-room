@@ -58,8 +58,12 @@ public class FloatingObjects : XRGrabInteractable
 
         if (xrRigObject != null && teleportTarget != null)
         {
+            // Get the main camera (user head in XR)
+            Transform cameraTransform = xrRigObject.GetComponentInChildren<Camera>().transform;
             xrRigObject.transform.position = teleportTarget.position;
             xrRigObject.transform.rotation = teleportTarget.rotation;
+            cameraTransform.position = teleportTarget.position;
+            cameraTransform.rotation = teleportTarget.rotation;
             Debug.Log("Teleported to: " + teleportTarget.position);
         }
         else
