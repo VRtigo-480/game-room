@@ -11066,16 +11066,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 709872881}
     m_Modifications:
     - target: {fileID: 726079139407410117, guid: f49f097561511dd499970e7f53740fdd, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 726079139407410117, guid: f49f097561511dd499970e7f53740fdd, type: 3}
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 726079139407410118, guid: f49f097561511dd499970e7f53740fdd, type: 3}
       propertyPath: m_UseGravity
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 726079139407410118, guid: f49f097561511dd499970e7f53740fdd, type: 3}
       propertyPath: m_IsKinematic
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 726079139407410118, guid: f49f097561511dd499970e7f53740fdd, type: 3}
       propertyPath: m_CollisionDetection
@@ -13881,11 +13885,11 @@ GameObject:
   - component: {fileID: 629770297}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: otable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!64 &629770297
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -13931,7 +13935,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 608a4ca4479484d88abf7e033e0ad35a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -13970,8 +13974,8 @@ Transform:
   m_GameObject: {fileID: 629770296}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.0812492, y: 11.48885, z: 14.176597}
-  m_LocalScale: {x: 0.1, y: 1, z: 0.1}
+  m_LocalPosition: {x: 0.267, y: 11.48885, z: 14.176597}
+  m_LocalScale: {x: 0.13133132, y: 1, z: 0.15152}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 709872881}
@@ -15249,7 +15253,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetArea: {fileID: 1604870098}
+  playerArea: {fileID: 0}
   launchForce: 5
+  playerLaunch: 10
   resetPosition: {fileID: 832932677}
   ptext: {fileID: 79435685}
   otext: {fileID: 871084292}
@@ -17636,8 +17642,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9c6eee3d84944ce5af15dec99edd3b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetArea: {fileID: 629770296}
-  launchForce: 5
+  targetArea: {fileID: 781032838}
+  playerArea: {fileID: 629770296}
+  launchForce: 4
+  playerLaunch: 3
   resetPosition: {fileID: 1983563118}
   ptext: {fileID: 1511803384}
   otext: {fileID: 1482721446}

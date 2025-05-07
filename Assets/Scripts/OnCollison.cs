@@ -5,7 +5,9 @@ using UnityEngine.SocialPlatforms.Impl;
 public class OnCollisionBounce : MonoBehaviour
 {
     public GameObject targetArea;
+    public GameObject playerArea;
     public float launchForce = 10f;
+    public float playerLaunch = 10f;
     public GameObject resetPosition;
     public TextMeshPro ptext;
     public TextMeshPro otext;
@@ -31,9 +33,9 @@ public class OnCollisionBounce : MonoBehaviour
             ResetBools();
             isAI = true;
             Vector3 randomPoint = GetRandomPointInArea();
-            Vector3 direction = (randomPoint - transform.position).normalized;
-            rb.linearVelocity = direction * launchForce;
-            rb.linearVelocity = -rb.linearVelocity;
+            Vector3 direction = (randomPoint - transform.position).normalized * launchForce;
+            direction.y = -direction.y * 5f;
+            rb.linearVelocity = direction;
         }
         if (collision.gameObject.CompareTag("floor"))
         {
@@ -124,6 +126,10 @@ public class OnCollisionBounce : MonoBehaviour
         {
             ResetBools();
             isPlayer = true;
+            Vector3 randomPoint = GetRandomPointInArea2();
+            Vector3 direction = (randomPoint - transform.position).normalized * launchForce;
+            direction.y = -direction.y;
+            rb.linearVelocity = direction;
         }
     }
 
@@ -138,6 +144,19 @@ public class OnCollisionBounce : MonoBehaviour
     Vector3 GetRandomPointInArea()
     {
         Collider areaCollider = targetArea.GetComponent<Collider>();
+
+        Vector3 min = areaCollider.bounds.min;
+        Vector3 max = areaCollider.bounds.max;
+
+        return new Vector3(
+            Random.Range(min.x, max.x),
+            Random.Range(min.y, max.y),
+            Random.Range(min.z, max.z)
+        );
+    }
+    Vector3 GetRandomPointInArea2()
+    {
+        Collider areaCollider = playerArea.GetComponent<Collider>();
 
         Vector3 min = areaCollider.bounds.min;
         Vector3 max = areaCollider.bounds.max;
